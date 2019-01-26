@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
-	context({ req } /* :{req:Request} */) {
+	context({ req }) {
 		console.log(req.user + 'from context');
 
 		return {
